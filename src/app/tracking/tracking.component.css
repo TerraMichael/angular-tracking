@@ -1,8 +1,15 @@
 .timeline{
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
     padding: 1rem;
+}
+
+.timeline-horizontal{
+    flex-direction: row;
+}
+
+.timeline-vertical{
+    flex-direction: column;
 }
 
 .timeline-event{
@@ -15,6 +22,11 @@
     min-height: 0;
 }
 
+.timeline-event:last-child .timeline-track{
+    min-width: 0;
+    display: none;
+}
+
 .timeline-content{
     flex: 1;
     padding: 0 1rem;
@@ -23,10 +35,17 @@
 .timeline-point-track-container{
     flex: 0;
     display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
+.container-horizontal{
+    flex-direction: row;
+    align-items: left;
+}
+
+.container-vertical{
+    flex-direction: column;
+    align-items: center;
+}
 .timeline-point{
     display: flex;
     align-self: baseline;
@@ -41,6 +60,12 @@
     flex-grow: 1;
     background-color: #f07404;
     width: 2px;
+}
+
+.track-horizontal{
+    width: 5rem;
+    height: 2px;
+    margin-top: 9px;
 }
 
 .timeline-date{
